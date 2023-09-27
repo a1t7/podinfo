@@ -9,10 +9,11 @@ spec:
     app: podinfo
   ports:
     - name: http
-      port: 9898
+      nodePort: 33333
       protocol: TCP
       targetPort: http
-    - port: 9999
+    - nodePort: 33334
       targetPort: grpc
       protocol: TCP
       name: grpc
+  type: NodePort
